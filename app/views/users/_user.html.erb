@@ -1,0 +1,14 @@
+
+<h4><b>email:</b> <%=user.email%></h4>
+
+
+<h4> <%= link_to 'upload a shirt', new_user_shirt_path(user) %></h4>
+
+
+<div>
+<h4><%=link_to 'see my shirts', user_shirts_path(user) %></h4>
+</div>
+<div>
+<h4><%=link_to 'edit my profile', edit_user_registration_path %> </h4>
+</div>
+</div>

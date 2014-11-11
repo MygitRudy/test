@@ -1,0 +1,9 @@
+<div class='profile-container'>
+	<h4>All Users</h4>
+			 <%@users.each do |user|%>
+			 <p><%=user.email%> |
+			 <%=link_to "see this user's shirts", user_shirts_path(user) %> | 
+			 <%=link_to "edit this user's profile", edit_user_registration_path %> 
+		 	 </p>
+			 <%end%>
+</div>

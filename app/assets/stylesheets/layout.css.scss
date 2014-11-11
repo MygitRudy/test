@@ -1,0 +1,220 @@
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+
+// for fading in the navbar bottom border on page load
+@keyframes fadebottom {
+    from { border-bottom-color: rgba(255,255,255,0); }
+    to   { border-bottom-color: rgba(255,255,255,1); }
+}
+/* Firefox < 16 */
+@-moz-keyframes fadebottom {
+  from { border-bottom-color: rgba(255,255,255,0); }
+  to   { border-bottom-color: rgba(255,255,255,1); }
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadebottom {
+    from { border-bottom-color: rgba(255,255,255,0); }
+    to   { border-bottom-color: rgba(255,255,255,1); }
+}
+/* Internet Explorer */
+@-ms-keyframes fadebottom {
+  from { border-bottom-color: rgba(255,255,255,0); }
+  to   { border-bottom-color: rgba(255,255,255,1); }
+}
+/* Opera < 12.1 */
+@-o-keyframes fadebottom {
+  from { border-bottom-color: rgba(255,255,255,0); }
+  to   { border-bottom-color: rgba(255,255,255,1); }
+}
+
+
+
+// for fading in the main content of the page on page load
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right bottom; 
+}
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  margin:auto;
+  width: 80%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+
+
+/*
+ * Header
+ */
+.masthead {
+  position: fixed;
+  background:rgba(0,0,0,1);
+  top: 0;
+  width:inherit;
+}
+.masthead-brand {
+  float:left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.masthead-nav{
+    float:right;
+}
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+//  some stuff to make the transitions on mouseover continuous
+  -webkit-transition: border-bottom-color 400ms ease-in-out;
+     -moz-transition: border-bottom-color 400ms ease-in-out;
+      -ms-transition: border-bottom-color 400ms ease-in-out;
+       -o-transition: border-bottom-color 400ms ease-in-out;
+          transition: border-bottom-color 400ms ease-in-out;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: rgba(255,255,255,1);
+  border-bottom-color: #fff;
+  -webkit-animation: fadebottom 3s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadebottom 3s; /* Firefox < 16 */
+      -ms-animation: fadebottom 3s; /* Internet Explorer */
+       -o-animation: fadebottom 3s; /* Opera < 12.1 */
+          animation: fadebottom 3s;
+}
+
+
+
+// main content container
+
+.content-container{
+  width:100%; // relative to the one-higher-up container
+  height:100%; //ideally,
+  padding-top:50px;
+  -webkit-animation: fadein .4s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein .4s; /* Firefox < 16 */
+      -ms-animation: fadein .4s; /* Internet Explorer */
+       -o-animation: fadein .4s; /* Opera < 12.1 */
+          animation: fadein .4s;
+}
+
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+  position:fixed;
+	bottom:0;
+  width:inherit;
+	background:rgba(255,255,255,0);
+  height:30px;
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
+  /*background-color: #000000;*/
+}
+//
+//
+///*
+// * Affix and center
+// */
+////
+//@media (min-width: 768px) {
+//  /* Pull out the header and footer */
+//  .masthead {
+//    position: fixed;
+//    background:rgba(0,0,0,1);
+//    top: 0;
+//  }
+//  .mastfoot {
+//    position: fixed;
+//    background-color: #000000;
+//    bottom: 0;
+//  }
+//  /* Start the vertical centering */
+////  .site-wrapper-inner {
+////    vertical-align: middle;
+////  }
+//  /* Handle the widths */
+//  .masthead,
+//  .mastfoot,
+//  .cover-container {
+//    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+//  }
+//}
+//
+//@media (min-width: 992px) {
+//  .masthead,
+//  .mastfoot,
+//  .cover-container {
+//    width: 80%;
+//  }
+//}

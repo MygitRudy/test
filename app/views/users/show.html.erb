@@ -1,0 +1,11 @@
+<div class='profile-container'>
+	<hr>
+	<% if @user.admin_role%>
+	<h4> <%=link_to "manage users", manage_path%> </h4>
+	<hr>
+	<%end%>
+	
+	<%= render @user%>
+	<hr>
+
+</div>

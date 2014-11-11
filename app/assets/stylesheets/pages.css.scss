@@ -1,0 +1,17 @@
+
+
+// home page
+.main-emph-text {
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 2s; /* Firefox < 16 */
+      -ms-animation: fadein 2s; /* Internet Explorer */
+       -o-animation: fadein 2s; /* Opera < 12.1 */
+          animation: fadein 2s;
+}
+.cover{
+  display:table;
+}
+.cover-element{
+  display:table-row;
+  vertical-align:middle;
+}

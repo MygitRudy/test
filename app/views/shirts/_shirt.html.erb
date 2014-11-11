@@ -1,0 +1,6 @@
+<%=shirt.created_at%><br/>
+<%=shirt.paperpic.url%><br/>
+<%= image_tag shirt.paperpic.url(:thumb)%> <br/>
+<%= link_to 'Destroy Shirt', [shirt.user, shirt],
+               method: :delete,
+               data: { confirm: 'Delete?' } %>

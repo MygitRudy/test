@@ -1,0 +1,25 @@
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+#   # For details on connection pooling, see rails configuration guide
+#   # http://guides.rubyonrails.org/configuring.html#database-pooling
+#   pool: 5
+# development:
+#   <<: *default
+#   database: constructive_development
+#   username: mark
+#   password: a
+# test:
+#   <<: *default
+#   database: constructive_test
+#   username: mark
+#   password: a
+# production:
+#   url: <%= ENV['DATABASE_URL'] %>
+
+development:
+  adapter: mysql2
+  encoding: utf8
+  database: constructive_dev
+  username: root
+  password: root
